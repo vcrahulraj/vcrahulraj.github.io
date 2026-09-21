@@ -1,4 +1,4 @@
-# Rahul Raj V C — GitHub Portfolio
+# Rahulraj V C — GitHub Portfolio
 
 A fast, accessible static portfolio for an IAM and OT security analyst transitioning toward AI security and Generative AI engineering.
 
@@ -39,4 +39,4 @@ The `.nojekyll` file keeps GitHub Pages in static-file mode. Project and profile
 
 ## License
 
-Source code is available under the MIT License. Personal biography, experience claims, and branding remain attributable to Rahul Raj V C.
+Source code is available under the MIT License. Personal biography, experience claims, and branding remain attributable to Rahulraj V C.
