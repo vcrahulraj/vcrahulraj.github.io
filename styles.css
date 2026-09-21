@@ -777,6 +777,20 @@ code {
   font-size: clamp(1.8rem, 5vw, 2.8rem);
 }
 
+.project-title-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-title-link:hover,
+.project-title-link:focus-visible {
+  color: var(--accent);
+}
+
+.project-button {
+  width: fit-content;
+}
+
 .project-subtitle {
   margin-bottom: 1.25rem;
   color: var(--accent);
@@ -1280,6 +1294,23 @@ code {
   flex-wrap: wrap;
   margin-top: 1.5rem;
   gap: 0.75rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+}
+
+.footer-links a {
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--accent);
 }
 
 .project-detail-hero {
