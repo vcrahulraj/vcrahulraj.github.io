@@ -349,16 +349,23 @@ code {
 }
 
 .hero h1 {
-  max-width: 13ch;
+  max-width: none;
   margin-bottom: 1.5rem;
-  font-size: clamp(3rem, 11vw, 6.3rem);
+  font-size: clamp(2.35rem, 9.5vw, 6.3rem);
   letter-spacing: -0.065em;
+  white-space: nowrap;
 }
 
-.hero h1 span {
+.hero-name-primary {
   background: linear-gradient(105deg, var(--accent), var(--blue) 58%, var(--violet));
   background-clip: text;
   color: transparent;
+}
+
+.hero-name-secondary {
+  font-size: 0.58em;
+  font-weight: 560;
+  letter-spacing: -0.035em;
 }
 
 .hero-role {
@@ -1051,17 +1058,6 @@ code {
   color: var(--text-muted);
   font-family: "SFMono-Regular", Consolas, monospace;
   font-size: 0.76rem;
-}
-
-.promotion-badge {
-  display: inline-flex;
-  padding: 0.22rem 0.5rem;
-  border: 1px solid rgba(87, 230, 203, 0.25);
-  border-radius: 999px;
-  background: var(--accent-wash);
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 700;
 }
 
 .timeline-item ul {
@@ -1782,7 +1778,7 @@ code {
 
 @media (min-width: 38rem) {
   .hero-proof {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .project-footer {
@@ -2007,8 +2003,7 @@ code {
     display: none;
   }
 
-  .tech-list li,
-  .promotion-badge {
+  .tech-list li {
     border-color: #9eacba;
   }
 }
