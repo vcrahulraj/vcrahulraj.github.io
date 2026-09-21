@@ -9,6 +9,7 @@ The site leads with:
 - measurable, AI-assisted workflow automation;
 - certifications, skills, and education; and
 - two secure AI portfolio prototypes built with synthetic data, placed after the professional resume content;
+- dedicated in-portfolio detail pages for both projects, so visitors are not sent to unpublished repositories;
 - explicit boundaries between professional production work and independent portfolio prototypes.
 
 ## View locally

@@ -44,22 +44,6 @@
     link.addEventListener("click", (event) => event.preventDefault());
   };
 
-  document.querySelectorAll("[data-repo-link]").forEach((link) => {
-    const label = link.querySelector("[data-repo-label]");
-    const repositoryKey = link.dataset.repoLink;
-    const repository = config.PROJECT_REPOSITORIES?.[repositoryKey];
-
-    if (!hasUsername || !repository) {
-      markPending(link, label, "Repository link pending");
-      return;
-    }
-
-    link.href = `https://github.com/${encodeURIComponent(username)}/${encodeURIComponent(repository)}`;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    if (label) label.textContent = "View repository";
-  });
-
   const profileLink = document.querySelector("[data-github-profile]");
   if (profileLink) {
     const label = profileLink.querySelector("[data-profile-label]");
@@ -67,7 +51,7 @@
       profileLink.href = `https://github.com/${encodeURIComponent(username)}`;
       profileLink.target = "_blank";
       profileLink.rel = "noopener noreferrer";
-      if (label) label.textContent = `github.com/${username}`;
+      if (label) label.textContent = "GitHub source profile";
     } else {
       markPending(profileLink, label, "GitHub profile pending");
     }
