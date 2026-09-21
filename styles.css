@@ -1352,6 +1352,213 @@ code {
   gap: 0.75rem;
 }
 
+.demo-section {
+  padding-block: clamp(2.5rem, 7vw, 5rem);
+  background: rgba(120, 169, 255, 0.035);
+}
+
+.demo-shell {
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  border: 1px solid rgba(87, 230, 203, 0.26);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 100% 0, rgba(87, 230, 203, 0.08), transparent 24rem),
+    linear-gradient(145deg, rgba(19, 37, 59, 0.92), rgba(9, 21, 35, 0.96));
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.2);
+}
+
+.demo-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.demo-heading > div {
+  max-width: 47rem;
+}
+
+.demo-heading h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.demo-heading p:not(.section-kicker) {
+  margin-bottom: 0;
+  color: var(--text-soft);
+}
+
+.demo-safety {
+  padding: 0.38rem 0.68rem;
+  border: 1px solid rgba(87, 230, 203, 0.3);
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.demo-workspace {
+  display: grid;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.demo-controls,
+.demo-output {
+  padding: clamp(1.1rem, 3vw, 1.6rem);
+  border: 1px solid var(--line);
+  border-radius: 0.9rem;
+  background: rgba(3, 10, 18, 0.3);
+}
+
+.demo-controls {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.demo-controls label {
+  margin-top: 0.35rem;
+  color: var(--text-soft);
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.demo-controls select,
+.demo-controls textarea {
+  width: 100%;
+  padding: 0.78rem 0.85rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 0.55rem;
+  outline: none;
+  background: var(--bg-deep);
+  color: var(--text);
+  font: inherit;
+}
+
+.demo-controls select:focus-visible,
+.demo-controls textarea:focus-visible {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.2rem rgba(87, 230, 203, 0.12);
+}
+
+.demo-controls textarea {
+  resize: vertical;
+}
+
+.demo-controls .button {
+  margin-top: 0.5rem;
+  justify-content: center;
+}
+
+.demo-help,
+.demo-context {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+}
+
+.demo-output {
+  min-height: 19rem;
+  outline: none;
+}
+
+.demo-output:focus-visible {
+  border-color: var(--accent);
+}
+
+.demo-empty {
+  display: grid;
+  min-height: 16rem;
+  align-content: center;
+  justify-items: center;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.demo-empty strong {
+  color: var(--text-soft);
+  font-size: 1.1rem;
+}
+
+.demo-result-head {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.demo-result-head div {
+  display: grid;
+  padding: 0.75rem 0.85rem;
+  gap: 0.2rem;
+  border: 1px solid var(--line);
+  border-radius: 0.55rem;
+  background: rgba(120, 169, 255, 0.04);
+}
+
+.demo-result-head span {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.demo-result-head strong {
+  font-size: 0.9rem;
+}
+
+.demo-result-head div:first-child strong {
+  color: var(--accent);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 1.2rem;
+}
+
+.demo-result-body {
+  margin-top: 1.25rem;
+}
+
+.demo-result-body h3 {
+  margin: 1rem 0 0.35rem;
+  font-size: 0.95rem;
+}
+
+.demo-result-body p,
+.demo-result-body li {
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.demo-result-body ul,
+.demo-result-body ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.demo-result-body li + li {
+  margin-top: 0.35rem;
+}
+
+.demo-draft {
+  padding: 0.85rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(87, 230, 203, 0.05);
+}
+
+.demo-context {
+  margin-top: 1rem;
+}
+
+.risk-medium {
+  color: #f5c66a;
+}
+
+.risk-high,
+.risk-critical {
+  color: #ff8f8f;
+}
+
 .detail-content-section {
   padding-top: clamp(2.5rem, 6vw, 4.5rem);
 }
@@ -1473,6 +1680,14 @@ code {
 }
 
 @media (min-width: 52rem) {
+  .demo-workspace {
+    grid-template-columns: minmax(16rem, 0.72fr) minmax(0, 1.28fr);
+  }
+
+  .demo-result-head {
+    grid-template-columns: 0.7fr 0.8fr 1.5fr;
+  }
+
   .detail-grid {
     grid-template-columns: 1fr 1fr;
   }

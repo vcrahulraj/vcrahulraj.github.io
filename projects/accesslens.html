@@ -28,9 +28,39 @@
           <p class="project-detail-role">IAM Access Review Assistant</p>
           <p class="project-detail-lede">A safe learning project that reviews fictional identity and entitlement data, identifies common access risks, and prepares a manager-friendly review package.</p>
           <div class="detail-actions">
-            <a class="button button-primary" href="../index.html#projects">Back to portfolio</a>
-            <a class="button button-secondary" href="../assets/Rahul_Raj_V_C_Resume.pdf" download>Download resume</a>
+            <a class="button button-primary" href="#working-demo">Try working prototype</a>
+            <a class="button button-secondary" href="../index.html#projects">Back to portfolio</a>
             <a class="button button-secondary" href="https://github.com/vcrahulraj/accesslens-iam-copilot" target="_blank" rel="noopener noreferrer">View source repository</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="working-demo" class="section-shell demo-section" aria-labelledby="demo-title">
+        <div class="container demo-shell" data-demo="accesslens">
+          <div class="demo-heading">
+            <div>
+              <p class="section-kicker">Interactive browser demo</p>
+              <h2 id="demo-title">Run a fictional access review</h2>
+              <p>Choose a sample identity and run the review. The prototype applies visible, deterministic rules and never connects to a real IAM system.</p>
+            </div>
+            <span class="demo-safety">Synthetic data only</span>
+          </div>
+          <div class="demo-workspace">
+            <form class="demo-controls" data-demo-form>
+              <label for="accesslens-identity">Fictional identity</label>
+              <select id="accesslens-identity" data-demo-select>
+                <option value="anika">Anika Shah · Finance Analyst · Active</option>
+                <option value="marcus">Marcus Lee · Contractor · Active</option>
+                <option value="priya">Priya Nair · Former Administrator · Terminated</option>
+              </select>
+              <label for="accesslens-note">Reviewer note</label>
+              <textarea id="accesslens-note" rows="4" data-demo-note>Quarterly access certification. Validate access against current responsibilities.</textarea>
+              <button class="button button-primary" type="submit">Run access review</button>
+              <p class="demo-help">Advisory only. A manager or access owner makes the final decision.</p>
+            </form>
+            <div class="demo-output" data-demo-output aria-live="polite" tabindex="-1">
+              <div class="demo-empty"><strong>Ready to review</strong><span>Select a fictional identity and run the prototype.</span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -76,5 +106,6 @@
 
     <footer class="site-footer"><div class="container footer-inner"><div><strong>Rahul Raj V C</strong><span>IAM · OT Security · Workflow Automation</span></div><p>Resume portfolio project</p></div></footer>
     <script src="../script.js"></script>
+    <script src="../project-demos.js"></script>
   </body>
 </html>

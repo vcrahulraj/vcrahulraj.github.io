@@ -28,9 +28,39 @@
           <p class="project-detail-role">Alert-to-escalation learning workflow</p>
           <p class="project-detail-lede">A safe learning project that turns fictional OT monitoring alerts into structured risk summaries, suggested response steps, and analyst escalation drafts.</p>
           <div class="detail-actions">
-            <a class="button button-primary" href="../index.html#projects">Back to portfolio</a>
-            <a class="button button-secondary" href="../assets/Rahul_Raj_V_C_Resume.pdf" download>Download resume</a>
+            <a class="button button-primary" href="#working-demo">Try working prototype</a>
+            <a class="button button-secondary" href="../index.html#projects">Back to portfolio</a>
             <a class="button button-secondary" href="https://github.com/vcrahulraj/ot-security-triage-agent" target="_blank" rel="noopener noreferrer">View source repository</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="working-demo" class="section-shell demo-section" aria-labelledby="demo-title">
+        <div class="container demo-shell" data-demo="ot-triage">
+          <div class="demo-heading">
+            <div>
+              <p class="section-kicker">Interactive browser demo</p>
+              <h2 id="demo-title">Triage a fictional OT alert</h2>
+              <p>Choose a sample alert and run the analysis. The prototype scores the scenario, suggests analyst actions, and prepares an escalation summary.</p>
+            </div>
+            <span class="demo-safety">No asset actions</span>
+          </div>
+          <div class="demo-workspace">
+            <form class="demo-controls" data-demo-form>
+              <label for="ot-alert">Fictional alert</label>
+              <select id="ot-alert" data-demo-select>
+                <option value="plc">PLC-07 · Repeated authentication failures</option>
+                <option value="hmi">HMI-12 · Lost monitoring connection</option>
+                <option value="historian">HIST-03 · Degraded network traffic</option>
+              </select>
+              <label for="ot-note">Analyst context</label>
+              <textarea id="ot-note" rows="4" data-demo-note>Validate the alert, confirm operational impact, and prepare an escalation for the responsible team.</textarea>
+              <button class="button button-primary" type="submit">Analyze alert</button>
+              <p class="demo-help">Decision support only. Remediation requires analyst approval and site procedures.</p>
+            </form>
+            <div class="demo-output" data-demo-output aria-live="polite" tabindex="-1">
+              <div class="demo-empty"><strong>Ready to analyze</strong><span>Select a fictional alert and run the prototype.</span></div>
+            </div>
           </div>
         </div>
       </section>
@@ -76,5 +106,6 @@
 
     <footer class="site-footer"><div class="container footer-inner"><div><strong>Rahul Raj V C</strong><span>IAM · OT Security · Workflow Automation</span></div><p>Resume portfolio project</p></div></footer>
     <script src="../script.js"></script>
+    <script src="../project-demos.js"></script>
   </body>
 </html>
